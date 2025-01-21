@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Universal Sans Display", -apple-system, Arial, sans-serif;
+}
+
+.logo {
+    background-image: url(Images/Icon/RRlogo.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 5vmax;
+    border-radius: 70%;
+    width: 5vmax;
+}
+
+h1 {
+    color: black;
+    justify-content: flex-start;
+    font-size: 2.2rem;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 30vmax;
+    background-color: gray;
+    height: 4rem;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+li {
+    list-style: none;
+}
+
+.logo-div {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-div>a{
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+#menu {
+    display: none;
+}
+
+nav>ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#hide {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 30vmax;
+    width: 50%;
+    z-index: 999;
+    opacity: 0.9;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: auto;
+    flex-direction: column;
+}
+
+#hide>ul {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: auto;
+    margin-top: 0;
+
+    width: 100%;
+}
+
+#hide>ul>li {
+    padding: 2vmax 10px;
+    width: 100%;
+
+}
+
+nav>ul>li a {
+    text-decoration: none;
+    padding: 2vmax 10px;
+    color: black;
+
+    font-size: 1.1rem;
+}
+
+#hide {
+    display: none;
+}
+
+header {
+    height:auto;
+    width: 100%;
+    background-color: white;
+}
+
+section {
+    height: auto;
+    width: 90%;
+    margin: auto;
+    margin-top: 3%;
+}
+
+.image-intro {
+    height: 34vmax;
+    margin: auto;
+    width: 80%;
+    background-image: url(Images/Products/toyota\ bz4x.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: animation-images 100s infinite running;
+}
+
+.our-intro>h1>span {
+    color: rgb(223, 167, 95);
+}
+
+.our-intro>h1 {
+    font-size: 2.2rem;
+
+}
+
+.our-intro {
+    margin-left: 1%;
+    height: auto;
+}
+
+.our-intro>p {
+   
+    margin-top: 1%;
+    margin-bottom:3%;
+    font-size: 0.9rem;
+
+}
+.our-intro>p>span{
+    font-weight: bold;
+}
+.our-intro>p>:first-child{
+    font-size: 1.4rem;
+
+}
+#watsapp{
+    position: fixed;
+    z-index: 1000;
+    right: 20px;
+    bottom: 60px;
+    height: 7vmax;
+    border-radius: 50%;
+    width: 7vmax;
+    background-image: url(Images/Icon/Watsapp/watsapp.webp);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.links {
+    background-color: #fff;
+}
+
+footer {
+    position: relative;
+    height: 20vmax;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+}
+
+.logo-footer {
+    margin-left: 3%;
+    display: flex;
+    margin-right: auto;
+    margin-top: 2%;
+}
+
+.set {
+    height: 4vmax;
+    width: 4vmax;
+}
+
+.logo-footer>h2 {
+    font-size: 2rem;
+    color: rgb(223, 167, 95);
+}
+
+.links>span>a {
+    height: 3vmax;
+    width: 3vmax;
+    background: rgba(255, 255, 255, 0.808);
+    background-image: url(Images/Icon/instagra.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    border-radius: 100%;
+    box-sizing: border-box;
+    transition: 0.5s ease;
+}
+
+.links>span>a:hover {
+    margin-bottom: 0.5vmax;
+}
+
+#facebook {
+    background-image: url(Images/Icon/facebook.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+#twitter {
+    background-image: url(Images/Icon/twitter.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.links {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 2%;
+    background-color: black;
+    width: 15vmax;
+    justify-content: space-evenly;
+    margin-right: 2%;
+
+}
+
+@keyframes animation-images {
+    0% {
+        background-image: url(Images/Products/audi\ Q8\ etron.png);
+    }
+
+    20% {
+        background-image: url(Images/Products/ME\ GCLASS.jpg);
+    }
+
+    40% {
+        background-image: url(Images/Products/kia\ soul.jpg);
+    }
+
+    60% {
+        background-image: url(Images/Products/honda\ clarity.jpg);
+    }
+
+    80% {
+        background-image: url(Images/Products/suzuki\ fronx.jpg);
+    }
+
+    100% {}
+}
+
+@media (max-width:735px) {
+    section {
+        width: 100%;
+    }
+
+    .image-intro {
+        width: 99%;
+    }
+
+    .our-intro {
+        width: 90%;
+        margin: auto;
+    }
+
+    .our-intro>p {
+        margin-top: 2%;
+    }
+}
+  
+
+
+
+@media (max-width: 600px) {
+    #menu {
+        display: flex;
+    }
+
+    .first-hide {
+        display: none;
+    }
+}
+</style>
+</head>
+<body>
+    <nav>
+        <div class="logo-div"><a href="Main Html.html">
+         <div class="logo"  ></div>
+         <h1>RR Motors</h1></a>
+        </div>
+
+         <ul class="first-hide">
+             <li><a href="Home Html.html">Home</a></li>
+             <li><a href="About Html.html">About</a></li>
+             <li><a href="Contect Html.html">Contect</a></li>
+         </ul>
+         <li id="menu" inc> <svg xmlns="http://www.w3.org/2000/svg"  height="32px" viewBox="0 -960 960 960" width="36px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+         
+            
+        
+ 
+     </nav>
+     <nav id="hide">
+       <ul><li id="close"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="36px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+             <li><a href="Home Html.html">Home</a></li>
+             <li><a href="About Html.html">About</a></li>
+             <li><a href="Contect Html.html">Contect</a></li>
+         </ul>
+        
+     </nav>
+     <header>
+
+        <section>
+            <div class="image-intro">
+                
+            </div>
+            <div class="our-intro">
+                <h1>Welcome to <span> RR Motors</span>,</h1>
+            <p><span> RR Motors </span>is a leading manufacturer of motorcycle and scooter parts. Our mission is to provide high-quality, reliable, and affordable products that meet the needs of our customers. At RR Motors, we pride ourselves on offering an exceptional selection of high-quality vehicles from the world's leading brands. Whether you're looking for the luxury of a<span> Mercedes</span>, the performance of an <span>Audi</span>, the innovation of a<span> Kia</span>, the reliability of a <span>Toyota</span>, or the affordability of a<span> Suzuki</span>, we have the perfect car to match your lifestyle and budget.
+
+                Explore our inventory, discover great deals, and experience unparalleled customer service. At RR Motors, we are dedicated to making your car-buying journey smooth and enjoyable. Let us help you drive home in your dream car today!
+                
+                </p>
+            </div>
+
+        </section>
+     </header>        <button ><a id="watsapp" href="https://web.whatsapp.com/"></a></button>
+     <footer><br>
+        <div class="logo-footer">
+            <div class="logo set"></div>
+            <h2>RR Motors</h2>
+           </div>
+        <div class="links">
+            <span><a href="#"  id="facebook" ></a></span>
+            <span ><a href="#" id="instagram"></a></span>
+            <span ><a href="#" id="twitter"></a></span>
+        </div>
+       
+    </footer>
+<script>
+    let menu = document.querySelector('#menu');
+let hide = document.querySelector('#hide');
+
+menu.addEventListener('click', shownav)
+
+function shownav() {
+    hide.style.display = "flex";
+}
+
+let close = document.querySelector('#close');
+close.addEventListener('click', closenav)
+
+function closenav() {
+    hide.style.display = "none";
+}
+
+let toyota = document.querySelector('#toyota');
+let id = document.querySelector('#ul');
+
+let honda = document.querySelector('#honda');
+let hondaid = document.querySelector('#hondaid');
+
+
+let audi = document.querySelector('#audi');
+let audiid = document.querySelector('#audiid');
+
+let mercedes = document.querySelector('#mercedes');
+let mercedesid = document.querySelector('#mercedesid');
+
+
+let kia = document.querySelector('#kia');
+let kiaid = document.querySelector('#kiaid');
+
+
+
+let Suzuki = document.querySelector('#Suzuki');
+let Suzukiid = document.querySelector('#Suzukiid');
+
+
+
+toyota.addEventListener('mouseover', showcollections)
+function showcollections() {
+    id.style.display = "block";
+
+}
+window.addEventListener('click', showcollections=>{
+    id.style.display = "none";
+})
+
+
+honda.addEventListener('mouseover', showcollections_honda)
+function showcollections_honda() {
+    hondaid.style.display = "block";
+
+}
+window.addEventListener('click', showcollections_Suzuki=>{
+    hondaid.style.display = "none";
+})
+
+
+
+
+audi.addEventListener('mouseover', showcollectionsaudi)
+function showcollectionsaudi() {
+    audiid.style.display = "block";
+
+}
+window.addEventListener('click', showcollections_Suzuki=>{
+    audiid.style.display = "none";
+})
+
+
+
+
+mercedes.addEventListener('mouseover', showcollections_mercedes)
+function showcollections_mercedes() {
+    mercedesid.style.display = "block";
+
+}
+window.addEventListener('click', showcollections_Suzuki=>{
+    mercedesid.style.display = "none";
+})
+
+
+
+
+kia.addEventListener('mouseover', showcollections_kia)
+function showcollections_kia() {
+    kiaid.style.display = "block";
+
+}
+window.addEventListener('click', showcollections_Suzuki=>{
+    kiaid.style.display = "none";
+})
+
+
+
+
+Suzuki.addEventListener('mouseover', showcollections_Suzuki)
+function showcollections_Suzuki() {
+    
+    Suzukiid.style.display = "block";
+    Suzukiid.style.position = "absolute";
+    // Suzukiid.style.bottom='-430px';
+    Suzukiid.style.width='10%';
+    
+}
+// Suzuki.addEventListener('mouseover', showcollections_Suzuki)
+// function showcollections_Suzuki() {
+    
+//     Suzukiid.style.display = "block";
+//     Suzukiid.style.position = "absolute";
+//     Suzukiid.style.bottom='-430px';
+//     Suzukiid.style.width='15%';
+    
+// }
+
+window.addEventListener('click', showcollections_Suzuki=>{
+    Suzukiid.style.display = "none";
+})
+</script></body>
+</html>
